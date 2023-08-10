@@ -12,33 +12,32 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var numberoGerado = 0;
 
-  int _numberoAleatorio() {
+  void _numberoAleatorio() {
     Random gerarNumero = Random();
-    return gerarNumero.nextInt(1000);
+    setState(() {
+      numberoGerado = gerarNumero.nextInt(1000);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                "Nico",
-                textAlign: TextAlign.right,
-              ),
-            ],
-          ),
+      appBar: AppBar(
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              "Nico",
+              textAlign: TextAlign.right,
+            ),
+          ],
         ),
-        body: Center(child: Text(numberoGerado.toString())),
-        floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              numberoGerado = _numberoAleatorio();
-            });
-          },
-        ));
+      ),
+      body: Center(child: Text(numberoGerado.toString())),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _numberoAleatorio,
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }
