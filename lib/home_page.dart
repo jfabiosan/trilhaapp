@@ -30,23 +30,13 @@ class _HomePageState extends State<HomePage> {
         children: [
           Center(
               child: Text(
-            'Quantodades de Cliques',
+            'Gerando $quantidadeCliques vezes',
             style: GoogleFonts.aboreto(fontSize: 15),
           )),
           Center(
               child: Text(
-            quantidadeCliques.toString(),
-            style: GoogleFonts.aboreto(fontSize: 40),
-          )),
-          Center(
-              child: Text(
-            'Numero da Sorte',
-            style: GoogleFonts.aboreto(fontSize: 15),
-          )),
-          Center(
-              child: Text(
-            numeroGerado.toString(),
-            style: GoogleFonts.aboreto(fontSize: 40),
+            'Numero da sorte: $numeroGerado',
+            style: GoogleFonts.aboreto(fontSize: 20),
           )),
         ],
       ),

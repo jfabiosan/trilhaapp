@@ -5,6 +5,6 @@ var quantidadeCliques = 0;
 
 void numeroAleatorio() {
   Random gerarNumero = Random();
-  numeroGerado = gerarNumero.nextInt(9);
+  numeroGerado = gerarNumero.nextInt(100);
   quantidadeCliques += 1;
 }
