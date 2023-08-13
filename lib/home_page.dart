@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'functions/gerar_numero.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,17 +14,42 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
               "Nico",
               textAlign: TextAlign.right,
+              style: GoogleFonts.aladin(fontSize: 30),
             ),
           ],
         ),
       ),
-      body: Center(child: Text(numeroGerado.toString())),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+              child: Text(
+            'Quantodades de Cliques',
+            style: GoogleFonts.aboreto(fontSize: 15),
+          )),
+          Center(
+              child: Text(
+            quantidadeCliques.toString(),
+            style: GoogleFonts.aboreto(fontSize: 40),
+          )),
+          Center(
+              child: Text(
+            'Numero da Sorte',
+            style: GoogleFonts.aboreto(fontSize: 15),
+          )),
+          Center(
+              child: Text(
+            numeroGerado.toString(),
+            style: GoogleFonts.aboreto(fontSize: 40),
+          )),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
