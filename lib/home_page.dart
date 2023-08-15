@@ -25,20 +25,42 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
+      body: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+                child: Text(
+              'Gerando $quantidadeCliques vezes',
+              style: GoogleFonts.aboreto(fontSize: 15),
+            )),
+            Center(
               child: Text(
-            'Gerando $quantidadeCliques vezes',
-            style: GoogleFonts.aboreto(fontSize: 15),
-          )),
-          Center(
-              child: Text(
-            'Numero da sorte: $numeroGerado',
-            style: GoogleFonts.aboreto(fontSize: 20),
-          )),
-        ],
+                'Numero da sorte: $numeroGerado',
+                style: GoogleFonts.aboreto(fontSize: 20),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Start',
+                  style: GoogleFonts.aboreto(fontSize: 20),
+                ),
+                Text(
+                  'center',
+                  style: GoogleFonts.aboreto(fontSize: 20),
+                ),
+                Text(
+                  'end',
+                  style: GoogleFonts.aboreto(fontSize: 20),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
