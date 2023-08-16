@@ -42,14 +42,17 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Expanded(
-              flex: 4,
-              child: Container(
-                width: double.infinity,
-                color: Colors.orange,
-                child: Text(
-                  'Gerando $quantidadeCliques vezes',
-                  style: GoogleFonts.adamina(fontSize: 15),
+            Center(
+              child: SizedBox(
+                height: 50,
+                width: 250,
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.orange,
+                  child: Text(
+                    'Gerando $quantidadeCliques vezes',
+                    style: GoogleFonts.adamina(fontSize: 15),
+                  ),
                 ),
               ),
             ),
