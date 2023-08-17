@@ -48,6 +48,18 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 child: const Text("Informe a senha"),
               ),
+              Expanded(child: Container()),
+              Container(
+                width: double.infinity,
+                height: 30,
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                color: Colors.blue,
+                alignment: Alignment.center,
+                child: const Text("Confirmar"),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
