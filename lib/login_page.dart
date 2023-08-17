@@ -60,6 +60,14 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 20,
               ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                alignment: Alignment.center,
+                child: const Text("Cadastre-se"),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
