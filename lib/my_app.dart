@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        textTheme: GoogleFonts.aladinTextTheme(),
+        textTheme: GoogleFonts.robotoFlexTextTheme(),
       ),
       //home: const HomePage(),
       home: const LoginPage(),
