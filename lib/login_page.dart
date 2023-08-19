@@ -21,10 +21,10 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 50,
               ),
-              Container(
-                width: 150,
-                height: 100,
-                color: Colors.amber,
+              const Icon(
+                Icons.person,
+                size: 150,
+                color: Colors.deepOrange,
               ),
               const SizedBox(
                 height: 20,
@@ -33,9 +33,14 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.blue,
+                //color: Colors.blue,
                 alignment: Alignment.center,
-                child: const Text("Informe seu CPF"),
+                child: const Row(
+                  children: [
+                    Expanded(flex: 2, child: Text("Informe seu CPF:")),
+                    Expanded(flex: 3, child: Text("CPF")),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -44,9 +49,14 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.blue,
+                //color: Colors.blue,
                 alignment: Alignment.center,
-                child: const Text("Informe a senha"),
+                child: const Row(
+                  children: [
+                    Expanded(flex: 2, child: Text("Informe a senha:")),
+                    Expanded(flex: 3, child: Text("senha")),
+                  ],
+                ),
               ),
               Expanded(child: Container()),
               Container(
