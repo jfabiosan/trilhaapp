@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: SizedBox(
           width: double.infinity,
           child: Column(
@@ -35,54 +35,106 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 20,
               ),
+              const Text("Já tem cadastro?",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700)),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Faça seu login e make the change_",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
               Container(
                 width: double.infinity,
                 height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                //color: Colors.blue,
                 alignment: Alignment.center,
                 child: const Row(
                   children: [
-                    Expanded(flex: 2, child: Text("Informe seu CPF:")),
-                    Expanded(flex: 3, child: Text("CPF")),
+                    Expanded(
+                        flex: 2,
+                        child: Text(
+                          "Informe seu email:",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )),
+                    Expanded(
+                        flex: 3,
+                        child: Text(
+                          "email",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 30,
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                alignment: Alignment.center,
+                child: const Row(
+                  children: [
+                    Expanded(
+                        flex: 2,
+                        child: Text(
+                          "Informe a senha:",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        )),
+                    Expanded(
+                        flex: 3,
+                        child: Text("senha",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ))),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: double.infinity,
                 height: 30,
-                margin: const EdgeInsets.symmetric(horizontal: 30),
-                //color: Colors.blue,
-                alignment: Alignment.center,
-                child: const Row(
-                  children: [
-                    Expanded(flex: 2, child: Text("Informe a senha:")),
-                    Expanded(flex: 3, child: Text("senha")),
-                  ],
-                ),
               ),
-              Expanded(child: Container()),
               Container(
                 width: double.infinity,
                 height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
                 color: Colors.green,
                 alignment: Alignment.center,
-                child: const Text("Confirmar"),
+                child: const Text("Entrar"),
+              ),
+              Expanded(child: Container()),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 30),
+                alignment: Alignment.center,
+                child: const Text("Esqueci minha senha",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 148, 134, 9),
+                        fontWeight: FontWeight.w700)),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 30),
                 alignment: Alignment.center,
-                child: const Text("Cadastre-se"),
+                child: const Text(
+                  "criar conta",
+                  style: TextStyle(color: Color.fromARGB(255, 11, 129, 15)),
+                ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
             ],
           ),
