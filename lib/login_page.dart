@@ -21,10 +21,16 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 50,
               ),
-              const Icon(
-                Icons.person,
-                size: 150,
-                color: Colors.deepOrange,
+              Row(
+                children: [
+                  Expanded(child: Container()),
+                  Expanded(
+                    flex: 8,
+                    child: Image.network(
+                        "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
+                  ),
+                  Expanded(child: Container()),
+                ],
               ),
               const SizedBox(
                 height: 20,
@@ -63,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.blue,
+                color: Colors.green,
                 alignment: Alignment.center,
                 child: const Text("Confirmar"),
               ),
