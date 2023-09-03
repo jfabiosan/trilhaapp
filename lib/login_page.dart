@@ -109,11 +109,20 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
                 alignment: Alignment.center,
+                //tamanho do botao na horizontal para ocupar todo espaco na tela
                 child: SizedBox(
                   width: double.infinity,
                   child: TextButton(
                     onPressed: () {},
+                    //propriedade do estilo do botao
                     style: ButtonStyle(
+                      //cantos arredondados
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      //cor do botao
                       backgroundColor: MaterialStateProperty.all(
                           const Color.fromARGB(255, 161, 16, 167)),
                     ),
