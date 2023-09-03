@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: const Row(
                   children: [
                     Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Text(
                           "Informe seu email:",
                           style: TextStyle(
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         )),
                     Expanded(
-                        flex: 3,
+                        flex: 2,
                         child: Text(
                           "email",
                           style: TextStyle(
@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: const Row(
                   children: [
                     Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Text(
                           "Informe a senha:",
                           style: TextStyle(
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         )),
                     Expanded(
-                        flex: 3,
+                        flex: 2,
                         child: Text("senha",
                             style: TextStyle(
                               color: Colors.white,
@@ -107,11 +107,22 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 width: double.infinity,
-                height: 30,
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.green,
                 alignment: Alignment.center,
-                child: const Text("Entrar"),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          const Color.fromARGB(255, 161, 16, 167)),
+                    ),
+                    child: const Text(
+                      "ENTRAR",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
               ),
               Expanded(child: Container()),
               Container(
