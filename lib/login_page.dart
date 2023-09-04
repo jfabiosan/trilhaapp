@@ -8,6 +8,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  var email = "";
+  var senha = "";
+  bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -61,8 +64,12 @@ class _LoginPageState extends State<LoginPage> {
                     height: 30,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
-                    child: const TextField(
-                      decoration: InputDecoration(
+                    child: TextField(
+                      onChanged: (value) {
+                        email = value;
+                      },
+                      style: const TextStyle(color: Colors.white),
+                      decoration: const InputDecoration(
                           hintText: "Email",
                           hintStyle: TextStyle(color: Colors.white),
                           prefixIcon: Icon(
@@ -78,17 +85,31 @@ class _LoginPageState extends State<LoginPage> {
                     height: 30,
                     margin: const EdgeInsets.symmetric(horizontal: 30),
                     alignment: Alignment.center,
-                    child: const TextField(
+                    child: TextField(
+                      obscureText: isObscureText,
+                      onChanged: (value) {
+                        senha = value;
+                      },
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           hintText: "Senha",
-                          hintStyle: TextStyle(color: Colors.white),
-                          prefixIcon: Icon(
+                          hintStyle: const TextStyle(color: Colors.white),
+                          prefixIcon: const Icon(
                             Icons.lock,
                             color: Colors.white,
                           ),
-                          suffixIcon: Icon(
-                            Icons.visibility,
-                            color: Colors.white,
+                          suffixIcon: InkWell(
+                            onTap: () {
+                              setState(() {
+                                isObscureText = !isObscureText;
+                              });
+                            },
+                            child: Icon(
+                              isObscureText
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.white,
+                            ),
                           )),
                     )),
                 const SizedBox(
@@ -102,7 +123,10 @@ class _LoginPageState extends State<LoginPage> {
                   child: SizedBox(
                     width: double.infinity,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        //print(email);
+                        //print(senha);
+                      },
                       //propriedade do estilo do botao
                       style: ButtonStyle(
                         //cantos arredondados
