@@ -15,12 +15,37 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: const Text("Main Page"),
         ),
-        drawer: const Drawer(
+        drawer: Drawer(
             child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text("Dados Cadastrais")],
+            children: [
+              InkWell(
+                child: const Text("Dados Cadastrais"),
+                onTap: () {},
+              ),
+              const Divider(),
+              const SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                child: const Text("Configuracões"),
+                onTap: () {},
+              ),
+              const Divider(),
+              const SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                child: const Text("Termos de uso"),
+                onTap: () {},
+              ),
+              const Divider(),
+              const SizedBox(
+                height: 10,
+              ),
+            ],
           ),
         )),
       ),
