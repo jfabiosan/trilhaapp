@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1063391873873",
+    "project_id": "fabioftth-firebase-app",
+    "storage_bucket": "fabioftth-firebase-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063391873873:android:62c32d1360cf4664712170",
+        "android_client_info": {
+          "package_name": "com.josefabio.trilhaapp.trilhaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCevrr7yuA6d-scvdS6_zSCVi3C6FRsiCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
