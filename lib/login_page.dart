@@ -177,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                   alignment: Alignment.center,
                   child: const Text(
                     "criar conta",
-                    style: TextStyle(color: Color.fromARGB(255, 11, 129, 15)),
+                    style: TextStyle(color: Color.fromARGB(255, 12, 129, 15)),
                   ),
                 ),
                 const SizedBox(
