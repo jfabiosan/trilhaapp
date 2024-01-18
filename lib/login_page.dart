@@ -166,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
                   alignment: Alignment.center,
                   child: const Text("Esqueci minha senha",
                       style: TextStyle(
-                          color: Color.fromARGB(255, 148, 134, 9),
+                          color: Color.fromARGB(255, 145, 134, 9),
                           fontWeight: FontWeight.w700)),
                 ),
                 const SizedBox(
